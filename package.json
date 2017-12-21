@@ -1,0 +1,54 @@
+{
+  "name": "node-sendcloud-sdk",
+  "version": "0.0.1",
+  "description": "my impeccable project",
+  "repository": {
+    "url": "sinchang/node-sendcloud-sdk",
+    "type": "git"
+  },
+  "main": "dist/index.common.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test:cov": "jest --coverage && npm run lint",
+    "test": "jest",
+    "lint": "standard",
+    "prepublish": "npm run build",
+    "build": "bili --filename index",
+    "publish": "npm run prepublish && npm publish"
+  },
+  "author": "sinchang <sinchangwen@gmail.com>",
+  "license": "MIT",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          [
+            "env",
+            {
+              "targets": {
+                "node": "current"
+              }
+            }
+          ]
+        ]
+      }
+    }
+  },
+  "standard": {
+    "globals": [ "expect", "test" ]
+  },
+  "dependencies": {
+    "axios": "^0.17.1"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.4.0",
+    "bili": "^0.17.0",
+    "jest-cli": "^19.0.0",
+    "standard": "^10.0.0"
+  }
+}
