@@ -16,8 +16,8 @@ test('get', () => {
 
 test('get throw error', () => {
   expect(() => {
-    new SendCloud('', '')
-  }).toThrow();
+    new SendCloud('', '') // eslint-disable-line no-new
+  }).toThrow()
 })
 
 test('post', () => {
