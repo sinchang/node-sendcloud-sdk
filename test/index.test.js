@@ -1,7 +1,7 @@
 import SendCloud from '../src'
 
-const apiUser = CIRCLE_API_USER
-const apiKey = CIRCLE_API_KEY
+const apiUser = process.env.API_USER
+const apiKey = process.env.API_KEY
 
 test('main', () => {
   expect(typeof SendCloud).toBe('function')
