@@ -14,6 +14,12 @@ test('get', () => {
   })
 })
 
+test('get throw error', () => {
+  expect(() => {
+    new SendCloud('', '')
+  }).toThrow();
+})
+
 test('post', () => {
   const client = new SendCloud(apiUser, apiKey)
   return client.post('mail/send', {
